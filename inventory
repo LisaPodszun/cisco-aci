@@ -8,6 +8,6 @@ ansible_network_os=cisco.aci.aci
 ansible_user=admin
 # For production environment do not store clear text passwords in inventory, instead use environment variables or ansible vault
 # In case of Ansible Automation Platform use Custom Credentials with environment variables
-ansible_password='Cisco123'
+ansible_password='Redhat123'
 ansible_httpapi_validate_certs=false
 ansible_httpapi_use_ssl=true
