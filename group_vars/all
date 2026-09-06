@@ -1,2 +1,2 @@
 ---
-ansible_controller: 192.168.130.5
+ansible_controller: localhost
