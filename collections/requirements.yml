@@ -1,0 +1,7 @@
+---
+# Installed by AAP at job launch when this project is synced.
+# Requires a Galaxy / Automation Hub credential on the Organization.
+collections:
+  - name: cisco.aci
+  - name: ansible.netcommon
+  - name: ansible.utils

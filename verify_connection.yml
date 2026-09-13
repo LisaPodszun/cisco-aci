@@ -1,0 +1,16 @@
+---
+- name: Verify APIC connectivity
+  hosts: apic
+  gather_facts: false
+
+  tasks:
+    - name: Query tenants from APIC
+      cisco.aci.aci_tenant:
+        state: query
+      register: tenant_query
+
+    - name: Show APIC login succeeded
+      ansible.builtin.debug:
+        msg: >-
+          Connected to {{ ansible_host }}.
+          Tenant count: {{ tenant_query.current | length }}

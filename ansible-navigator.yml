@@ -1,4 +1,6 @@
 ---
+# Local navigator only. Cloud AAP ignores this file and uses the Job Template EE
+# plus collections/requirements.yml.
 ansible-navigator:
   ansible:
     config:

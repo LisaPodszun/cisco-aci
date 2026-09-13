@@ -1,13 +1,12 @@
 [apic]
-apic1 ansible_host=sandboxapicdc.cisco.com
-; apic1 ansible_host=192.168.125.10
+apic1 ansible_host=80.138.119.248
+; apic1 ansible_host=sandboxapicdc.cisco.com  ; Cisco DevNet Always-On sandbox (shared - see README)
 
 [apic:vars]
 ansible_connection=ansible.netcommon.httpapi
 ansible_network_os=cisco.aci.aci
-ansible_user=admin
-# For production environment do not store clear text passwords in inventory, instead use environment variables or ansible vault
-# In case of Ansible Automation Platform use Custom Credentials with environment variables
 ansible_httpapi_use_ssl=true
 ansible_httpapi_validate_certs=false
 ansible_httpapi_port=443
+# Username/password come from AAP credentials (or ACI_USERNAME / ACI_PASSWORD).
+# Do not store the APIC password in git.

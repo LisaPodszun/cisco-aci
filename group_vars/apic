@@ -1,0 +1,6 @@
+---
+# httpapi authenticates with ansible_user / ansible_password.
+# Map AAP custom-credential env injectors (ACI_USERNAME / ACI_PASSWORD)
+# onto those vars. A Network credential sets ansible_* as extra vars and wins.
+ansible_user: "{{ lookup('env', 'ACI_USERNAME') | default('admin', true) }}"
+ansible_password: "{{ lookup('env', 'ACI_PASSWORD') | default('', true) }}"

@@ -1,4 +1,8 @@
 ---
+# Default target is the private homelab APIC simulator (single tenant, no
+# sharing conflicts). If you point ansible_host at the DevNet Always-On
+# sandbox instead, change tenant_name (and every tenant: reference below) to
+# something unique per team, or you will overwrite other users' data.
 tenants:
   - tenant_name: production
     description: 'Production Tenant'
